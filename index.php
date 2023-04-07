@@ -7,8 +7,11 @@
 		exit;
 	}
 
-	// Delete files that are more than one hour old
+	// Delete files that are more than one hour old, but not .php or .css files
 	foreach (glob('*.*') as $file) {
+		if (in_array(pathinfo($file, PATHINFO_EXTENSION), ['php', 'css'])) {
+			continue;
+		}
 		if (time() - filemtime($file) >= 3600) {
 			unlink($file);
 		}
