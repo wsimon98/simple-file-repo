@@ -1,0 +1,29 @@
+# Simple File Repo
+
+This is a simple PHP-based file repository that allows authenticated users to upload, download, and delete files in a directory.
+
+## Installation
+
+To use this file repository, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Ensure that you have PHP installed on your machine.
+3. Configure the upload directory by editing the `$target_dir` variable in `upload.php`.
+4. Configure authentication by editing the `login.php` file. The default login and password are both "demo".
+5. Upload the files to your web server.
+
+## Usage
+
+To use the file repository, simply navigate to the `index.php` file in your web browser. You will be prompted to log in using the credentials "demo" for both the login and password.
+
+Once authenticated, you will see a list of files in the upload directory. To upload a file, click the "Upload File" button and select a file from your computer.
+
+To download a file, simply click on the file name.
+
+To delete a file, click the "(delete)" link next to the file name. Note that only authenticated users can delete files.
+
+Files will be automatically deleted if they are more than one hour old.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
